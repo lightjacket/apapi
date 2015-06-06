@@ -11,7 +11,12 @@ gulp.task('recompile', function() {
 			stage: 1,
 			optional: ['runtime']
 		}))
-		.pipe(gulp.dest('dist'));
+		.pipe(gulp.dest('server-dist'));
+});
+
+gulp.task('recompile_css', function(){
+	return gulp.src('client-js/*.css')
+		.pipe(gulp.dest('client-dist'));
 });
 
 gulp.task('watch', function() {

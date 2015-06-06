@@ -1,6 +1,6 @@
 /*eslint-env node*/
 
-var webpack = require('webpack');
+//var webpack = require('webpack');
 
 module.exports = {
 	entry: [
@@ -15,6 +15,10 @@ module.exports = {
 			test: /\.jsx?$/,
 			exclude: /node_modules\//,
 			loaders: ['babel-loader?stage=1&optional=runtime']
+		},
+		{
+			test: /\.css$/,
+			loader: "style-loader!css-loader"
 		}]
 	}
 };

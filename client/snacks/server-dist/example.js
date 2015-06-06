@@ -1,11 +1,6 @@
-/*eslint-env node*/
-
 'use strict';
 
-var JBData = require('./jb-data.js');
+var express = require('express');
+var app = express();
 
-var Person = JBData.createModel({ name: new Array(60).join(' '), age: 0 });
-
-module.exports = {
-	Person: Person
-};
+app.use(express['static']('/client-dist'));

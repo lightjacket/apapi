@@ -2,4 +2,4 @@ var express = require('express');
 var app = express();
 
 
-app.use(express.static('files'));
+app.use(express.static('client'));

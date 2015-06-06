@@ -1,0 +1,55 @@
+h1{
+	text-align:center;
+}
+
+.scoreHolder{
+	background-color: #dddddd;
+	height: 2rem;
+	margin-bottom: 1%;
+	position: relative;
+	clear: right;
+	width: calc(100% - 2.5em);
+	display:  inline-block;
+}
+
+.resultScore{
+	background-color: #9999ee;
+	transition: width 1s;
+	height: 100%;
+	/* margin-bottom: 1%; */
+	color: white;
+	line-height: 2rem;
+	padding-left: .5rem;
+	/* float: left; */
+	display: inline-block;
+}
+
+.learnmore {
+  font-size: .5em;
+  padding-left: .5em;
+  color: #999999;
+  position: relative;
+  top: -.25em;
+}
+
+.scoreLabel{
+	/* float:right; */
+	/* margin-right: .5rem; */
+	/* display: inline-block; */
+	line-height: 2rem;
+	font-weight: 900;
+	font-size: 1.3em;
+	position: absolute;
+	right: .5rem;
+	top: 0;
+	margin-bottom: 2%;
+}
+
+.apiRow{
+	width:100%;
+	position: relative;
+}
+
+/*.scoreLabel::after{
+	content:'/100';
+}*/

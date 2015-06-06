@@ -91,6 +91,30 @@ app.get('/delete', function (req, res) {
   });
 });
 
+app.get('/getResult/:id*?', function(req, res, next) {
+  var id = req.params.id;
+  if(!id) {
+    console.log("no Id");
+    return;
+  }
+  console.log(id);
+});
+
+app.get('/getTestData/:id*?', function(req, res, next) {
+  var id = req.params.id;
+  if(!id) {
+    console.log("no ID");
+    return;
+  }
+  console.log(id);
+});
+
+app.get('/runTest/:testDataId/:apiId', function(req, res, next) {
+  var testDataId = req.params.testDataId;
+  var apiId = req.params.apiId;
+  console.log("valid route, testDataId: " + testDataId + " apiId: " + apiId);
+})
+
 // start server
 http.createServer(app).listen(app.get('port'), function () {
   console.log('Express server listening at http://' + host + ':' + port);

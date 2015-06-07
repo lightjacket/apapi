@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>API&sup2;</title>
+<link href="stylesheets/bootstrap.min.css" rel="stylesheet" />
+<link href="stylesheets/style.css" rel="stylesheet" />
+<link rel="stylesheet" href="stylesheets/font-awesome.min.css">
+<script src="javascripts/jquery.min.js"></script>
+<script src="javascripts/uploadpage.js"</script>
+
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div class="header">
+  <div class="container"> <a class="navbar-brand" href="index.html"><i class="fa fa-cog fa-1x"></i> API&sup2;</a>
+    <div class="menu"> <a class="toggleMenu" href="#"><img src="images/nav_icon.png" alt="" /> </a>
+      <ul class="nav" id="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="seeresults.html">See Results</a></li>
+        <li class="current"><a href="upload.html">Try it out</a></li>
+        <li><a href="about.html">About us</a></li>
+        <div class="clear"></div>
+      </ul>
+      <script type="text/javascript" src="javascripts/responsive-nav.js"></script> 
+    </div>
+  </div>
+</div>
+<div class="about">
+  <div class="container">
+    <section class="title-section">
+      <h1 class="title-header">Upload your own data to find the best API available
+      </h1>
+    </section>
+  </div>
+</div>
+<div class="container" style="text-align:center; margin-bottom:20px;">
+  <div class="row">
+    <span>Pick a type of API that you would like to test your data against: </span>
+
+
+    
+  <div class="dropdown" style="margin-bottom:20px; margin-left:10px; display:inline-block">
+  <div class="btn-group">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+    Select API
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+    <li role="presentation"><a role="menuitem" data-menu-type="1" tabindex="-1" href="#">OCR</a></li>
+    <li role="presentation"><a role="menuitem" data-menu-type="2" tabindex="-1" href="#">Speech Recognition</a></li>
+    <li role="presentation"><a role="menuitem" data-menu-type="3" tabindex="-1" href="#">Sentiment Analysis</a></li>
+  </ul>
+</div>
+</div>
+<div class="upload-section-container" style="display:none;"> 
+  <div class="upload-instructions" style="margin-bottom:20px;"></div>
+
+    <form action="/upload" enctype="multipart/form-data" method="POST">
+      <input type="file" name="file" style="margin: 0 auto 20px;
+  padding-left: 50px;">
+      <input type="submit" value="Upload File" class="upload_btn"/>
+      <input class="hidden-type-input" type="hidden" name="type"/>
+    </form>
+    </div>
+  </div>
+</div>
+<div class="main">
+<div class="footer">
+  <div class="footer_bottom">
+    <div class="follow-us"> <a class="fa fa-facebook social-icon" href="#"></a> <a class="fa fa-twitter social-icon" href="#"></a> <a class="fa fa-linkedin social-icon" href="#"></a> <a class="fa fa-google-plus social-icon" href="#"></a> </div>
+    <div class="copy">
+      <p>Copyright &copy; 2015 - API&sup2;</p>
+    </div>
+  </div>
+</div>
+<script src="javascripts/bootstrap.min.js"></script> 
+<script src="javascripts/jquery.flexslider.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+.scoreHolder{
+	background-color: #dddddd;
+	height: 2rem;
+	margin-bottom: 1%;
+	position: relative;
+	clear: right;
+	width: calc(100% - 2.5em);
+	display:  inline-block;
+}
+
+.resultScore{
+	background-color: #2ABB9B;
+	transition: width 1s;
+	height: 100%;
+	/* margin-bottom: 1%; */
+	color: white;
+	line-height: 2rem;
+	padding-left: .5rem;
+	/* float: left; */
+	display: inline-block;
+}
+
+.learnmore {
+  font-size: .5em;
+  padding-left: .5em;
+  color: #999999;
+  position: relative;
+  top: -.25em;
+}
+
+.scoreLabel{
+	/* float:right; */
+	/* margin-right: .5rem; */
+	/* display: inline-block; */
+	line-height: 2rem;
+	font-weight: 900;
+	font-size: 1.3em;
+	position: absolute;
+	right: .5rem;
+	top: 0;
+}
+
+.providerName{
+	position: absolute;
+	top: 0;
+	line-height:  2rem;
+	left: .5em;
+	color: white;
+}
+
+.apiRow{
+	width:100%;
+	position: relative;
+	/* margin-bottom: 2%; */
+}
+
+select{
+	outline: none;
+	width: 32%;
+	margin-left:1%;
+	/*background-color: rgba(43, 204, 156, 0.5);#2ABB9B;*/
+	margin-bottom:2rem;
+}
+
+select option:checked{
+	color:red;
+	background-color: #2ABB9B;
+}
+
+select option:selected{
+	background-color: #2ABB9B;
+}
+
+/*.scoreLabel::after{
+	content:'/100';
+}*/

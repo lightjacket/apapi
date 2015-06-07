@@ -2,6 +2,10 @@ h1{
 	text-align:center;
 }
 
+body{
+	font-family:'Helvetica'
+}
+
 .scoreHolder{
 	background-color: #dddddd;
 	height: 2rem;
@@ -42,12 +46,20 @@ h1{
 	position: absolute;
 	right: .5rem;
 	top: 0;
-	margin-bottom: 2%;
+}
+
+.providerName{
+	position: absolute;
+	top: 0;
+	line-height:  2rem;
+	left: .5em;
+	color: white;
 }
 
 .apiRow{
 	width:100%;
 	position: relative;
+	/* margin-bottom: 2%; */
 }
 
 /*.scoreLabel::after{

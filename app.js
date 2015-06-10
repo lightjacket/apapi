@@ -11,8 +11,7 @@ var fs = require('fs');
 var _ = require("underscore");
 var AdmZip = require('adm-zip');
 
-var port = (process.env.VCAP_APP_PORT || 3000);
-var host = (process.env.VCAP_APP_HOST || 'localhost');
+var port = (process.env.PORT || 3000);
 
 var ABBYY = require('./api_modules/ABBYY.js');
 var SHITAPI = require('./api_modules/SHITAPI.js');
@@ -279,7 +278,7 @@ app.get('/runTest/:testDataId/:apiId', function(req, res, next) {
 
 // start server
 http.createServer(app).listen(app.get('port'), function () {
-  console.log('Express server listening at http://' + host + ':' + port);
+  console.log('Express server listening at port:' + port);
   /*
   console.log("fuck");
   SHITAPI.runAPI("fuck");

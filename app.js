@@ -88,7 +88,7 @@ app.post('/upload',[ multer({ dest: './uploads/'}), function(req, res){
           }
           var sql = 'SELECT * FROM API WHERE datatype=' + req.body.type;
           console.log("sencind back /getresult/"+ result[0].id);
-          http.get("http://localhost:3000/runTest/" + result[0].id + "/" + req.body.type);
+          http.get("http://apapi.herokuapp.com/runTest/" + result[0].id + "/" + req.body.type);
           res.redirect("seeresults.html#/?id="+result[0].id);
         });
     });

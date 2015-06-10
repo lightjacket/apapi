@@ -13,14 +13,9 @@ var AdmZip = require('adm-zip');
 
 var port = (process.env.PORT || 3000);
 
-var ABBYY = require('./api_modules/ABBYY.js');
-var SHITAPI = require('./api_modules/SHITAPI.js');
-var HPOCR = require('./api_modules/HPOCR.js');
-
 // all environments
 var app = express();
 
-// check if application is being run in cloud environment
 var db = mysql.createConnection({
   "database": "hackathonmysql",
   "host": "hackathon.c7ppscfyfcfj.us-west-2.rds.amazonaws.com",
@@ -28,11 +23,9 @@ var db = mysql.createConnection({
   "user": "hackathon",
   "password": "asdfasdfa",
 });
-//createTable();
-
 
 app.set('port', port);
-app.set('view engine', 'html');
+app.set('view engine', 'html'); //do we want this weird hgan express shit?
 app.set('env', 'development');
 app.engine('html', hogan);
 
@@ -279,18 +272,7 @@ app.get('/runTest/:testDataId/:apiId', function(req, res, next) {
 // start server
 http.createServer(app).listen(app.get('port'), function () {
   console.log('Express server listening at port:' + port);
-  /*
-  console.log("fuck");
-  SHITAPI.runAPI("fuck");
-  console.log("fuck2");
-  var promise = HPOCR.runAPI();
-  promise.then(function(value) {
-    console.log(value);
-  });
-*/
 });
-
-
 
 function createTable() {
   var sql = 'CREATE TABLE IF NOT EXISTS posts ('
@@ -373,38 +355,4 @@ db.query(sql, function (err, result) {
   if (err) console.log(err);
 });
 console.log("created score type table");
-}
-
-
-// function getPosts(cb) {
-//   var sql = 'SELECT text FROM posts';
-//   db.query(sql, function (err, result) {
-//     if (err) return cb(err);
-//     cb(null, result);
-//   });
-// }
-
-// function addPosts(posts, cb) {
-//   var sql = 'INSERT INTO posts (text) VALUES ?';
-
-//   var values = posts.map(function (post) {
-//     return [post];
-//   });
-
-//   db.query(sql, [values], function (err, result) {
-//     if (err) return cb(err);
-//     cb(null, result);
-//   });
-// }
-
-// function deletePosts(cb) {
-//   var sql = 'DELETE FROM posts WHERE 1';
-//   db.query(sql, function (err, result) {
-//     if (err) return cb(err);
-//     cb(null, result);
-//   });
-// }
-
-function isNotEmpty(str) {
-  return str && str.trim().length > 0;
 }

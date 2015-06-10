@@ -254,7 +254,7 @@ app.get('/runTest/:testDataId/:apiId', function(req, res, next) {
                   scoreTypeValue = 2;
                   break;
               }
-              var sql = 'INSERT INTO SCORE (resultid, scoretype, value) VALUES (' + (result[0].id - outerIndex) + ', ' + scoreTypeValue + ', ' + scoreResult[scoreType] + ')';
+              var sql = 'INSERT INTO SCORE (resultid, scoretype, value) VALUES (' + (result[0].id - 2 + outerIndex) + ', ' + scoreTypeValue + ', ' + scoreResult[scoreType] + ')';
               console.log(sql);
               db.query(sql, function(err, results) {
                 if(err) {

@@ -119,7 +119,7 @@ function jReadFile(filePath){
 }
 
 function jRunAPI(filePath){
-  return jReadFile(filePath+'/test.txt').then(function(data){
+  return jReadFile(filePath+'/test.csv').then(function(data){
     var lines = data.split('\n');
     var resourceArray = [];
     //console.log("FirstLOG"+JSON.stringify(lines));
@@ -156,7 +156,7 @@ function jRunAPI(filePath){
       return {total: total, count: count};
     });
   }).then(function(obj){
-    return [{speed: obj.total[0]/obj.count}, {accuracy: obj.total[1]/obj.count}, 2];
+    return [{speed: obj.total[0]/obj.count}, {accuracy: (obj.total[1]/obj.count) * 100}, 2];
   }).catch(function(err){
     console.log(err);
   });
